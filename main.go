@@ -70,6 +70,7 @@ func main() {
 		fmt.Println("Error = ", err)
 	}
 	runtime.GC()
+
 	// Plonk zkSNARK: Setup
 	ccs, _solution, srs := referenceCircuit(ecc.BN254)
 	fullWitness, err := frontend.NewWitness(_solution, ecc.BN254.ScalarField())
